@@ -188,4 +188,64 @@ public class Helper {
             }
         }
     }
+    public static void FiguraDeRombo(JTable tabla1, JTable tabla2) {
+        int nf, nc, aux;
+
+        nf = tabla1.getRowCount();
+        nc = tabla1.getColumnCount();
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = (int) tabla1.getValueAt(i, j);
+
+                if ( j==nf/2-i||i==j+nf/2||i==j-nf/2||j==nf-i+nf/2-1) {
+                    tabla2.setValueAt(aux, i, j);
+                }
+            }
+        }
+    }
+    public static void FiguraDeCruz(JTable tabla1, JTable tabla2) {
+        int nf, nc, aux;
+
+        nf = tabla1.getRowCount();
+        nc = tabla1.getColumnCount();
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = (int) tabla1.getValueAt(i, j);
+
+                    if ( j==nc/2||i==(nf/2)-1||j==(nc/2)-1||i==nf/2) {
+                    tabla2.setValueAt(aux, i, j);
+                }
+            }
+        }
+    }
+    public static void FiguraDeIEnHorizontal(JTable tabla1, JTable tabla2) {
+        int nf, nc, aux;
+
+        nf = tabla1.getRowCount();
+        nc = tabla1.getColumnCount();
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = (int) tabla1.getValueAt(i, j);
+
+                    if (j>=i&&i>=nf-1-j||j<=i&&i<=nf-1-j) {
+                    tabla2.setValueAt(aux, i, j);
+                }
+            }
+        }
+    }
+    public static void FiguraDeI(JTable tabla1, JTable tabla2) {
+        int nf, nc, aux;
+
+        nf = tabla1.getRowCount();
+        nc = tabla1.getColumnCount();
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = (int) tabla1.getValueAt(i, j);
+
+                    if( i <=j&&j<=nf-1-i||i>=j&&j>=nf-1-i ) {
+                    tabla2.setValueAt(aux, i, j);
+                }
+            }
+        }
+    }
 }

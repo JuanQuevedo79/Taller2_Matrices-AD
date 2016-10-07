@@ -182,7 +182,7 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Operaciones"));
 
-        cmbOperaciones.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1. Letra B", "2. Letra K", "3. Letra M", "4. Letra  W", "5. Letra Q", "6. Letra J", "7. Letra G", "8. Letra R" }));
+        cmbOperaciones.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1. Letra B", "2. Letra K", "3. Letra M", "4. Letra  W", "5. Letra Q", "6. Letra J", "7. Letra G", "8. Letra R", "9. Figura De I", "10. Figura I en horizontal", "11. Figura de rombo", "12. Figura en Cruz" }));
         cmbOperaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbOperacionesActionPerformed(evt);
@@ -392,16 +392,16 @@ public class Principal extends javax.swing.JFrame {
                 Helper.letraR(tblTablaInicial, tblTablaResultado);
                 break;
             case 8:
-                 
+                 Helper.FiguraDeI(tblTablaInicial, tblTablaResultado);
                 break;
             case 9:
-                  
+                  Helper.FiguraDeIEnHorizontal(tblTablaInicial, tblTablaResultado);
                 break;
             case 10:
-                  
+                  Helper.FiguraDeRombo(tblTablaInicial, tblTablaResultado);
                 break;
             case 11:
-                  
+                  Helper.FiguraDeCruz(tblTablaInicial, tblTablaResultado);
                 break;
         }
 
